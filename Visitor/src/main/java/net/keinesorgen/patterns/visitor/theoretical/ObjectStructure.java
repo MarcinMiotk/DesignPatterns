@@ -9,7 +9,7 @@ import java.util.*;
  * @version 1.0
  * @created 02-sie-2015 09:00:46
  */
-public class ObjectStructure {
+class ObjectStructure {
 
 	private Vector elements = new Vector();
 

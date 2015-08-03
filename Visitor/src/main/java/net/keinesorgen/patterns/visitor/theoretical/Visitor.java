@@ -10,7 +10,7 @@ package net.keinesorgen.patterns.visitor.theoretical;
  * @version 1.0
  * @created 02-sie-2015 09:00:47
  */
-public abstract class Visitor {
+abstract class Visitor {
 
 	public Visitor(){
 

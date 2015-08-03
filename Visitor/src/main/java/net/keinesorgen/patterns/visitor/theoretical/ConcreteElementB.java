@@ -6,7 +6,7 @@ package net.keinesorgen.patterns.visitor.theoretical;
  * @version 1.0
  * @created 02-sie-2015 09:00:46
  */
-public class ConcreteElementB extends Element {
+class ConcreteElementB extends Element {
 
 	public ConcreteElementB(){
 

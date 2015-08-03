@@ -10,7 +10,7 @@ package net.keinesorgen.patterns.visitor.theoretical;
  * @version 1.0
  * @created 02-sie-2015 09:00:46
  */
-public class ConcreteVisitor2 extends Visitor {
+class ConcreteVisitor2 extends Visitor {
 
 	public ConcreteVisitor2(){
 

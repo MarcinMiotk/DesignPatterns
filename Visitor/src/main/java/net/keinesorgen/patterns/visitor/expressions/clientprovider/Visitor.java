@@ -5,6 +5,26 @@ package net.keinesorgen.patterns.visitor.expressions.clientprovider;
  */
 abstract class Visitor {
 
+    abstract void dispatch(PlusExpr p);
+
+    abstract void dispatch(NumberExpr n);
+
+    abstract void dispatch(RealExpr r);
+
+    abstract void dispatch(MinusExpr m);
+
+    public static Visitor create(Version10 v) {
+        return create10(v);
+    }
+
+    public static Visitor create(Version20 v) {
+        return create20(v);
+    }
+
+    public static Visitor create(Version30 v) {
+        return create30(v);
+    }
+
     private static Visitor create10(final Version10 v) {
         return new Visitor() {
 
@@ -99,22 +119,6 @@ abstract class Visitor {
     public Visitor() {
     }
 
-    public static Visitor create(Version10 v) {
-        return create10(v);
-    }
-
-    public static Visitor create(Version20 v) {
-        return create20(v);
-    }
-
-    public static Visitor create(Version30 v) {
-        return create30(v);
-    }
-
-    abstract void dispatch(PlusExpr p);
-
-    abstract void dispatch(NumberExpr n);
-
     public interface Version10 {
 
         boolean visitUnknown(Expression e);
@@ -130,8 +134,6 @@ abstract class Visitor {
         void visit(MinusExpr m);
     }
 
-    abstract void dispatch(MinusExpr m);
-
     // -----------------------------------------------------
     public interface Version30 {
 
@@ -145,5 +147,4 @@ abstract class Visitor {
         void visit(RealExpr n);
     }
 
-    abstract void dispatch(RealExpr r);
 }
