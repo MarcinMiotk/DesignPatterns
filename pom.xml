@@ -14,6 +14,7 @@
         <module>Visitor</module>
         <module>Memento</module>
         <module>State</module>
+        <module>Iterator</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
